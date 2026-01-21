@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primaria: #b30303;
+    --secundaria: #d31818;
+    --escuro: #1a1a1a;
+    --chapado: #000;
+    --claro: #dadada;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body{
+    background-color: var(--chapado);
+    color: var(--claro);
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    background: rgba(10, 10, 10, 0.8);
+    width: 100%;
+    z-index: 99;
+    padding: 1.5rem;
+}
+
+.menu{ /* Configuração da barra de navegação */
+    display: flex; /* Faz com que fiquei um do lado do outro */
+    justify-content: center; /* Ajusta no centro da tela */
+    list-style: none; /* Remove a 'bolinha" automática antes de cada palavra */
+    gap: 3rem; /* Coloca um espaçamento entre as palavras */
+}
+
+.menu-link{ /* Configuração das palavras da barra de navegação */
+    text-decoration: none; /* Remove a linha sublinhada das palavras */
+    color: var(--claro); /* Define a cor das palavras */
+    font-weight: 500; /* Define a grossura das palavras */
+    position: relative;
+    padding: 0.5rem 0; /* Ajusta margem das bordas - 0.5 cima/baixo - 0 direita/esquerda */
+}
+
+.menu-link::after{ /* Linha abaixo das palavras da barra de navegação */
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria),var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{ /* Animação das linhas abaixo das palavras da barra de navegação */
+    width: 100%;
+}
+
+.cabecalho{ /* Ajuste da primeira página do site */
+    min-height: 100vh; /* Ajusta o tamanho total da altura da tela para a página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil{ /* Ajuste da foto de perfil */
+    width: 250px; /* Ajusta a largura da imagem */
+    height: 250px; /*Ajusta a altura da imagem */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Sombreado atrás da imagem */
+    border-radius: 50%; /* Ajusta arredondamento da imagem */
+    animation: flutuar 5s ease-in-out infinite;
+    /*border: 2px solid var(--escuro); /* Ajusta grossura da linha da borda e a cor da linha da borda */
+}
+
+h1{ /* Ajusta o nome Filipe Assis */
+    font-size: 3.5rem; /* Tamanho do texto */
+    color: var(--primaria); /* Cor do texto */
+    font-weight: bold; /* Grossura do texto */
+    margin: 15px; /* Ajuste da margem cima/baixo do nome */
+}
+
+.cabecalho p{ /* Ajuste do subtítulo do Nome */
+    font-size: 1rem;
+    color: var(--claro);
+}
+
+/* AJUSTES DA PÁGINA 2 DO SITE (SOBRE MIM) */
+
+.sobre{ /* Ajuste da página 2 'Sobre Mim' */
+    min-height: 100vh;
+    padding: 6rem 2rem; /* Ajuste das margens da página 2 */
+}
+
+.titulo-sobre{ /* Ajuste do título das páginas */
+    font-size: 2rem;
+    color: var(--claro);
+    text-align: center; /* Ajusta título no centro da página */
+    margin-bottom: 20px; /* Ajusta margim de baixo do texto */
+}
+
+.sobre-caixa{ /* Ajuste da 'caixa' que vai ficar o texto sobre mim */
+    padding: 2rem; /* Margem interna do texto em relação a caixa */
+    max-width: 900px; /* Formato máximo da caixa */
+    margin: 0 auto; /* Ajusta texto na caixa */
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px); /*Colocando filtro esfumaçado na caixa */
+    background: rgba(255, 255, 255, 0.05) /* Cor de fundo da caixa */
+}
+
+.sobre-mim{ /* Ajustes do texto do parágrafo */
+    color: var(--claro);
+}
+
+/* AJUSTES DA PÁGINA 3 DO SITE (PROJETOS) */
+
+.projetos{ /* Ajuste da página projetos */
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.projetos-caixa{ /* Ajuste da 'caixa' que vai ficar os projetos */
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.projetos-card{ /*Ajuste das caixas da página */
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    padding: 1.5rem 1.5rem 3.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* linha suave */
+    border-radius: 16px; /* cantos arredondados */
+    background: rgba(255, 255, 255, 0.02); /* leve destaque no fundo */
+
+    transition: all 0.3s ease;
+    
+}
+
+.projetos-card:hover{
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    border-color: rgba(255, 0, 0, 0.8);
+    
+
+    /*border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-4px);*/
+}
+
+.btn-projeto{
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    color: var(--claro);
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+}
+
+.btn-projeto:hover{
+    color: #b30303;
+}
+
+.projetos-imagem{ /* Ajuste da imagem dos projetos */
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* linha suave */
+    border-radius: 12px;
+}
+
+.projetos-texto{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.titulo-projeto{
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primaria);
+}
+
+.paragrafo-projeto{
+    margin: 0;
+    color: var(--claro);
+    line-height: 1.6;
+}
+
+/* AJUSTES DA PÁGINA 4 DO SITE (CONTATO) */
+
+.contatos{
+    min-height: 100vh;
+    padding: 6rem 2rem;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+    resize: vertical;
+}
+
+.campo-form:focus{
+    border-color: var(--secundaria);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.botao-form{
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    /*font-weight: bold;*/
+    width: 50%;
+    transition: all 0.5s ease;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    background:
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--escuro);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: #d10000; /* mesmo vermelho do botão */
+  transform: translateY(-4px);
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}

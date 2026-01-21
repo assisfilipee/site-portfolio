@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Portfólio | Filipe Assis</title>
+
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="./img/eu.webp" alt="Foto Perfil Filipe Assis" class="foto-perfil">
+        <h1>Filipe Assis</h1>
+        <p>Desenvolvedor Front-end</p>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+
+        <h2 class="titulo-sobre">Sobre Mim</h2>
+
+        <div class="sobre-caixa">
+            <p class="sobre-mim">Sou profissional com mais de 15 anos de experiência no setor gráfico, especializado em
+                impressão digital,manutenção e operação de máquinas de alta performance. Minha trajetória é marcada pela
+                atuação em coordenação de produção, gestão de equipe, suporte técnico e otimização de processos, sempre
+                com foco em resultados e melhoria contínua.<br>
+
+                <br>Atualmente, estou direcionando minha carreira para a área de tecnologia, motivado pelo desejo de
+                aprender, evoluir e aplicar minhas competências em novos desafios. Tenho buscado constantemente
+                capacitação em programação, desenvolvimento de sistemas e inovação tecnológica, unindo minha experiência
+                prática em processos à transformação digital.<br>
+
+                <br>🔹 Pontos fortes:<br>
+
+                <br>- Gestão de produção e indicadores de desempenho<br>
+                - Operação e manutenção de equipamentos de alta performance<br>
+                - Liderança e desenvolvimento de equipes<br>
+                - Foco em resultados e aprimoramento contínuo<br>
+                - Interesse em tecnologia, programação e inovação<br>
+
+                <br>Meu objetivo é contribuir com projetos que envolvam tecnologia, automação e inovação, trazendo minha
+                bagagem em gestão de processos e minha dedicação em aprender e crescer nesse novo setor.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="projetos" class="projetos">
+
+        <h2 class="titulo-sobre">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+
+                <a href="https://assisfilipee.github.io/Login-Portf-lio/" target="_blank" class="btn-projeto">Ver
+                    Projeto Online</a>
+
+                <img src="./img/login-portfolio.webp" alt="Preview do Site de Login Portfolio" loading="lazy"
+                    class="projetos-imagem">
+
+                <div class="projetos-textos">
+                    <h3 class="titulo-projeto">Login Portfólio</h3>
+                    <p class="paragrafo-projeto">Uma página de login moderna e responsiva, construída com HTML e CSS,
+                        com foco em uma interface de usuário/experiência do usuário (UI/UX) limpa para integração de
+                        portfólio.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+
+                <a href="https://assisfilipee.github.io/Cafeteria/" target="_blank" class="btn-projeto">Ver Projeto
+                    Online</a>
+
+                <img src="./img/site-cafeteria.webp" alt="Preview do Site Cafeteria" loading="lazy"
+                    class="projetos-imagem">
+
+                <div class="projetos-textos">
+                    <h3 class="titulo-projeto">Site Cafeteria</h3>
+                    <p class="paragrafo-projeto">Site moderno e responsivo para cafeteria, desenvolvido com HTML e CSS,
+                        com ênfase em interface limpa, usabilidade e estrutura de negócios realista.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+
+                <a href="https://assisfilipee.github.io/Site-Fotografia/" target="_blank" class="btn-projeto">Ver
+                    Projeto Online</a>
+
+                <img src="./img/site-fotografia.webp" alt="Preview do Site Fotografia" loading="lazy"
+                    class="projetos-imagem">
+
+                <div class="projetos-textos">
+                    <h3 class="titulo-projeto">Site Fotografia</h3>
+                    <p class="paragrafo-projeto">Projeto de site institucional desenvolvido com **HTML, CSS e
+                        JavaScript**, focado em apresentar destinos turísticos de forma visual, moderna e interativa. O
+                        layout utiliza **slider/carrossel de imagens**, navegação intuitiva e uma experiência imersiva
+                        com destaque para fotografia e turismo.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contato" class="contatos">
+
+        <h2 class="titulo-sobre">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" required id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem..." rows="10" id="text-area"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+
+        <div class="social-links">
+
+            <a href="https://www.instagram.com/assisfilipee" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/assisfilipee" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/assisfilipee" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="mailto:lfilipeassis@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 • Criado por Filipe Assis</p>
+    </footer>
+
+    <script>
+
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('text-area').value;
+            const telefone = '5551992932891'
+
+            const texto = `Me chamo ${nome}, ${mensagem}`
+            const mensagemFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${mensagemFormatada}`
+
+            window.open(url, '_blank')
+        
+        }
+
+    </script>
+
+</body>
+
+</html>
